@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    --main-color: #b0aeff;
+    --card-background: #84C3C8;
+    --form-background: #f7f7f7;
+    --footer-background: #8b9dc3;
+}
+
+.main-wrapper, .web-header, .web-footer{ 
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+header{
+    background-color: var(--main-color);
+}
+
+.web-header{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*MAIN BODY STYLING*/
+
+.menu-grid{
+    /*2fr for white space and 12fr for the cards or conent*/
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 40px 0;
+}
+
+
+.cards {
+    /* start at column 2 and span 12 cols*/
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: 40px;
+}
+
+.card {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background);
+    cursor: pointer;
+}
+  
+
+.card-image{
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-content{
+    padding: 1em;
+}
+
+@media only screen and (max-width: 1000px){
+    .card{
+        grid-column-end: span 6;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .menu-grid{
+        grid-gap: 10px;
+    }
+    
+    .card{
+        grid-column-end: span 12;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .menu-grid{
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+    }
+    
+    .cards{
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    .card{
+        grid-column-end: span 10;
+    }
+}
+
+
+/*FORM STYLING*/
+
+.form-box{
+    background:#f7f7f7;
+    width: 50%;
+    padding: 1em;
+}
+
+footer{
+    background: var(--footer-background);
+    text-align: center;
+}
+
+label{
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+input{
+    height: 3em;
+}
+
+.submit-button{
+    margin-top: 1em;
+    background: #84C3C8;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: auto;
+}
+
+@media only screen and (max-width: 700px){
+    .form-box{
+        width: 100%;
+    }
+}

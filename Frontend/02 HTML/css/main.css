@@ -19,9 +19,79 @@ header{
     background-color: var(--main-color);
 }
 
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links ul{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li a{
+    padding: 1em;
+    display: block;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
 .web-header{ 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 500px){
+    .toggle-button{
+        display: flex;
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    .web-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links li{
+        text-align: center;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
 }
 
 .logo{
@@ -112,43 +182,7 @@ header{
 }
 
 
-/*FORM STYLING*/
-
-.form-box{
-    background:#f7f7f7;
-    width: 50%;
-    padding: 1em;
-}
-
 footer{
     background: var(--footer-background);
     text-align: center;
-}
-
-label{
-    display: block;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-input, textarea{
-    width: 100%;
-}
-
-input{
-    height: 3em;
-}
-
-.submit-button{
-    margin-top: 1em;
-    background: #84C3C8;
-    padding: 0.5em;
-    border-radius: 10px;
-    width: auto;
-}
-
-@media only screen and (max-width: 700px){
-    .form-box{
-        width: 100%;
-    }
 }

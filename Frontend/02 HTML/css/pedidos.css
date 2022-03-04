@@ -1,0 +1,16 @@
+table{
+    margin-top: 3em;
+    overflow-y:scroll;
+    height: auto;
+    display:block;
+    background-color: bisque;
+ }
+
+ th{
+     color: brown;
+
+ }
+
+ th, tr{
+     padding-right: 5em;
+ }

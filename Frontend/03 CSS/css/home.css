@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.web-header{
+    padding: 2.5em;
+}
+
+.web-header, .web-footer, .main-wrapper{
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-wrapper{
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+/*HEADER*/
+.web-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.web-header ul{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.web-header li{
+    list-style: none;
+    margin: 1em;
+}
+
+
+.info-button{
+    padding: 1em 2em;
+    border: none;
+    background: #2a4ac8;
+    box-shadow: 1px 0.5px 0.5px gray;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+   .nav-link{
+       display: none;
+   }
+}
+
+
+/*MAIN BODY*/
+.main-grid{
+    display: grid;
+    align-items: center;
+
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*repeat(12, minmax(auto, 80px));*/
+    grid-gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.card img{
+    width:100%;
+}
+
+#main-card{
+    padding: 5em;
+}
+
+.big-title{
+    padding-bottom: 1em;
+}
+
+.card-info{
+    padding: 1em;
+
+}
+
+.card-tags{
+    padding-top: 1em;
+    display: flex;
+}
+
+.tag{
+    padding: 1em;
+}
+/*
+@media (max-width: 1000px){
+    .main-grid{
+        grid-template-columns: repeat(6, minmax(auto, auto)) ;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card{
+        grid-column-end: span 6;
+    }
+ }*/
+
+ .form-input{
+     display: inline-block;
+ }
+
+ .float-form{
+     position: absolute;
+     bottom: 0%;
+     background: #EEEEEE;
+     padding: 1em;
+     opacity: 0.8;
+     font-weight: bolder;
+     border-radius: 5px;
+     margin-left: 1em;
+ }
+
+.brand-logos{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+ .brand-logos ul{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .brand-logos li{
+     list-style: none;
+     font-size: x-large;
+     font-weight: bolder;
+ }
+
+ .card-background{
+     border: 1px solid #EEEEEE;
+     border-radius: 5px;
+     transition: box-shadow .3s;
+ }
+
+ .card-background:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+
+  /*FOOTER*/
+
+footer{
+    background: #EEEEEE;
+}
+
+.card-center{
+    text-align: center;
+}
+
+.info-button{
+    margin: 1em;
+}

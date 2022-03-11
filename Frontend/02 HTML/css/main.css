@@ -121,8 +121,8 @@ header a{
 
 .card {
     grid-column-end: span 4;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
     background-color: var(--card-background);
     cursor: pointer;
 }
@@ -172,12 +172,13 @@ header a{
     
     .cards{
         grid-column: 2 / span 6;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
+        
     }
 
     .card{
-        grid-column-end: span 10;
+        grid-column-end: span 4;
     }
 }
 

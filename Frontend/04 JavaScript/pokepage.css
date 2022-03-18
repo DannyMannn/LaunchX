@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    background-color: #2A2725;
+    color: white;
+    --gameboy-height: 740px;
+    --gameboy-width: 450px;
+}
+
+.main-wrapper{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 700px){
+    .main-wrapper, body{
+        width: 100vh;
+    }
+ }
+
+.form-input{
+    width: 200px;
+    height: 2rem;
+    margin-left: 1rem;
+    border: 1px solid white;
+}
+
+#gameboy-container{
+    height: var(--gameboy-height);
+    width: var(--gameboy-width);
+    background: limegreen;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-absolute{
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#gameboy-screen{
+    position: absolute;
+    width: calc(var(--gameboy-width) * 0.93);
+    height: calc(var(--gameboy-height) * 0.45);;
+    background: black;
+    top: 15px;
+    border-radius: 10px;
+}
+
+#gameboy-logo{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: black;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    display: inline;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#gameboy-display{
+    position: absolute;
+    top: 15px;
+    width: calc(var(--gameboy-width) * 0.70);
+    height: calc(var(--gameboy-height) * 0.40);;
+    background-color: #222222;
+}
+
+#poke-img{
+    width: 100%;
+}
+
+#gameboy-bottom-half{
+    width: calc(var(--gameboy-width));
+    height: calc(var(--gameboy-height) * 0.40);;
+    position: absolute;
+    bottom: 10px;
+    background: inherit;
+}
+
+.gameboy-button{
+    position: absolute;
+    background: #DDDDDD;
+    display: inline-block;
+    font-size: xx-large;
+}
+
+.gameboy-ab-button{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.gameboy-bottom-button{
+    border-radius: 50%;
+    width: 60px;
+    height: 20px;
+}
+
+.gameboy-rectangle{
+    position: absolute;
+    background: #DDDDDD;
+    display: inline-block;
+    height: 100px;
+    width: 40px;
+}
+
+#rectangle1{
+    top: 0px;
+    left: 60px;
+}
+
+#rectangle2{
+    transform: rotate(90deg);
+    left: 60px;
+}
+
+#a-button{
+    right: 30px;
+}
+
+#b-button{
+    right: 100px;
+    top: 50px;
+}
+
+#bottom-button1{
+    bottom: 70px;
+}
+
+#bottom-button2{
+    bottom: 70px;
+    left: 150px;
+}

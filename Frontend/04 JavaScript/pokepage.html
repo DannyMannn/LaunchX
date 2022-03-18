@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pokedexFetch.js"></script>
+    <link rel="stylesheet" href="pokepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <label for="pokemon-choice">Write a Pokemon!</label>
+        <input class="form-input" type="text" name="pokemon-choice" placeholder="mewtwo" id="pokemon-choice">
+
+        <button onclick="fetchPokemon()">Fetch Pokémon!</button>
+
+        <div id="gameboy-container">
+            <div id="gameboy-screen" class="center-absolute">
+                <div id="gameboy-display" class="center-absolute">
+                    <img src="" alt=":( NOT FOUND" id="poke-img">
+                </div>
+                <div id="gameboy-logo" class="center-absolute">GAMEBOY COLOR</div>
+            </div>
+            <div id="gameboy-bottom-half">
+                <div class="gameboy-rectangle" id="rectangle1"></div>
+                <div class="gameboy-rectangle" id="rectangle2"></div>
+
+                <div class="gameboy-button gameboy-ab-button" id="a-button">A</div>
+                <div class="gameboy-button gameboy-ab-button" id="b-button">B</div>
+
+                <div class="gameboy-button gameboy-bottom-button" id="bottom-button1"></div>
+                <div class="gameboy-button gameboy-bottom-button" id="bottom-button2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

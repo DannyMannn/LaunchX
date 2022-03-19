@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="pokedexFetch.js"></script>
+    <script defer src="pokedexFetch.js"></script>
     <link rel="stylesheet" href="pokepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +13,15 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <label for="pokemon-choice">Write a Pokemon!</label>
+        <label for="pokemon-choice">Search a Pokemon!</label>
         <input class="form-input" type="text" name="pokemon-choice" placeholder="mewtwo" id="pokemon-choice">
 
-        <button onclick="fetchPokemon()">Fetch Pokémon!</button>
+        <button class="buttons" id="fetch-pokemon">Fetch Pokémon!</button>
 
         <div id="gameboy-container">
             <div id="gameboy-screen" class="center-absolute">
                 <div id="gameboy-display" class="center-absolute">
-                    <img src="" alt=":( NOT FOUND" id="poke-img">
+                    <img src="images/pokemon_screen.jpg" alt=":( NOT FOUND" id="poke-img">
                 </div>
                 <div id="gameboy-logo" class="center-absolute">GAMEBOY COLOR</div>
             </div>
@@ -35,6 +35,24 @@
                 <div class="gameboy-button gameboy-bottom-button" id="bottom-button1"></div>
                 <div class="gameboy-button gameboy-bottom-button" id="bottom-button2"></div>
             </div>
+        </div>
+
+        <div class="pokemon-stats">
+            <h1 id="main-ability"></h1>
+            <h1 id="base-experience"></h1>
+            <h1 id="height"></h1>
+            <h1 id="hp"></h1>
+            <div class="bar" id="base-experience-bar"></div>
+            <h1 id="attack"></h1>
+            <div class="bar" id="attack-bar"></div>
+            <h1 id="defense"></h1>
+            <div class="bar" id="defense-bar"></div>
+            <h1 id="special-attack"></h1>
+            <div class="bar" id="special-attack-bar"></div>
+            <h1 id="special-defense"></h1>
+            <div class="bar" id="special-defense-bar"></div>
+            <h1 id="speed"></h1>
+            <div class="bar" id="speed-bar"></div>
         </div>
     </div>
 </body>

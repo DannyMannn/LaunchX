@@ -12,7 +12,6 @@
     margin-right: auto;
     padding: 1rem;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
 }
 
 @media (max-width: 700px){
@@ -28,6 +27,21 @@
     border: 1px solid white;
 }
 
+.buttons{
+    padding: 1em;
+    background: #24A0ED;
+    border: none;
+    margin-left: 1em;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.buttons:hover{
+    background: #2eafff;
+}
+
 #gameboy-container{
     height: var(--gameboy-height);
     width: var(--gameboy-width);
@@ -36,6 +50,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+    margin-top: 2em;
 }
 
 .center-absolute{
@@ -139,4 +155,12 @@
 #bottom-button2{
     bottom: 70px;
     left: 150px;
+}
+
+.bar{
+    width: 10px;
+    
+    height: 20px;
+    border-radius: 10px;
+    background-color: yellow;
 }
